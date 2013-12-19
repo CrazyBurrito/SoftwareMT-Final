@@ -1,4 +1,11 @@
+<hdr>Derp Pamphlet: <b>Newsfeed</b></hdr>
+<br>
+<br>
+<br>
+
+<%-# Render each post -%>
 <%= render 'posts/form' %>
+<%-# Render all of the activities -%>
 <% @activities.each do |activity| %>
     <%= render_activity(activity) %>
 <% end %>

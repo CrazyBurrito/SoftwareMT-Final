@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .name {
-	color: #fff;
+	color: #ff4;
 }
 form{
 	font-size: 20px;
@@ -14,13 +14,15 @@ form{
     padding: 4px;
 }
 .like{
-    color: #990033;
+    color: #CCCC00;
+    font-size: 24px;
     font-weight: bold;
     padding: 5px;
     float: right;
 }
 .unlike{
-    color: #393f4c;
+    color: #FF0000;
+    font-size: 24px;
     font-weight: bold;
     padding: 5px;
     float: right;

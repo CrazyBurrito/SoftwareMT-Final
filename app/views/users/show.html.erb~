@@ -19,7 +19,7 @@
 <br>
 <br>
 <b>Hobbies:</b>
-<%= @user.name %>
+<%= @user.hobbies %>
 <br>
 <br>
 <b>Activities:</b>

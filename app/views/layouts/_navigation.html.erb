@@ -10,9 +10,9 @@
     </li>
   <% end %>
   <% if user_signed_in? %>
-    <li><%= link_to 'Profile', current_user %> </li>
+    <li><%= link_to 'View Profile Page', current_user %> </li>
     <li>
-    <%= link_to 'Users', users_url %>
+    <%= link_to 'Find Friends', users_url %>
     </li>
     <%= link_to 'Edit account', edit_user_registration_path %>
     </li>
