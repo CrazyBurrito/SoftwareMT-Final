@@ -27,18 +27,15 @@ class UsersController < ApplicationController
   end
 
   def follow
-
     @user = User.find(params[:user])
-  current_user.follow!(@user)
-        session[:requested_path] = request.path
-
+    current_user.follow!(@user)
+    session[:requested_path] = request.path
   end
 
   def unfollow
-
     @user = User.find(params[:user])
-  current_user.unfollow!(@user)
-        session[:requested_path] = request.path
+    current_user.unfollow!(@user)
+    session[:requested_path] = request.path
   end
 
   def like
