@@ -12,5 +12,4 @@ Facebook::Application.routes.draw do
     match 'like' => 'users#like'
     match 'unlike' => 'users#unlike'
 
-    match "*path" => redirect("/")
 end
