@@ -10,6 +10,11 @@ gem "socialization"
 gem "paperclip", "~> 3.0"
 gem 'public_activity'
 
+gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
+gem "capybara", ">= 2.0.2", :group => :test
+gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
+gem "database_cleaner", ">= 0.9.1", :group => :test
+gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
 
 # Gems used only for assets and not required
 # in production environments by default.
