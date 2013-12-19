@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if params[:search]
+      @users = User.search(params[:search])
+    else
+      @users = User.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -23,12 +27,12 @@ class UsersController < ApplicationController
   end
 
   def follow
-  	@user = User.find(params[:user])
-	current_user.follow!(@user)
+    @user = User.find(params[:user])
+  current_user.follow!(@user)
   end
   def unfollow
-  	@user = User.find(params[:user])
-	current_user.unfollow!(@user)
+    @user = User.find(params[:user])
+  current_user.unfollow!(@user)
   end
   def like
       if params[:likeable_type] == "Post"
@@ -36,7 +40,7 @@ class UsersController < ApplicationController
       else
           @likeable = Comment.find(params[:likeable_id])
       end
-	current_user.like!(@likeable)
+  current_user.like!(@likeable)
   end
   def unlike
       if params[:likeable_type] == "Post"
@@ -44,6 +48,6 @@ class UsersController < ApplicationController
       else
           @likeable = Comment.find(params[:likeable_id])
       end
-	current_user.unlike!(@likeable)
+  current_user.unlike!(@likeable)
   end
 end
